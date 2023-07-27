@@ -54,7 +54,7 @@ export default function Navbar({ className, ...props }: Props) {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="#"
                     className="hover:underline hover:text-white"
                   >
                     Youtube
