@@ -17,7 +17,7 @@ export default function About({ className, ...props }: Props) {
       {/* Description on the right side (2/3 width on large screens) */}
       <div className="lg:w-2/3 p-4 text-left">
         <p>
-          We are a Philippine startup game development company, dedicated to
+          We are a Filipino startup game development company, dedicated to
           crafting captivating experiences inspired by history. Our talented
           team of developers, designers, and storytellers collaborates to
           meticulously research and recreate historical settings, ensuring an
