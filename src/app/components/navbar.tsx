@@ -22,7 +22,7 @@ export default function Navbar({ className, ...props }: Props) {
         href="https://github.com/SourceGoose/.github/blob/main/profile/finelogo/sg-web-icon.ico"
       />
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://github.com/SourceGoose" className="flex items-center">
+        <a href="https://github.com/SourceGoose" className="flex items-center" target="_blank">
           <Logo className="h-20 mr-3" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             SourceGoose

@@ -46,7 +46,7 @@ export default function Navbar_Choices({ className, ...props }: Props) {
           People
         </Button>
       </a>
-      <a href="https://discord.gg/S5MSvFgm">
+      <a href="https://discord.gg/S5MSvFgm" target="_blank">
         <Button type="button" color="github">
           <svg
             className="w-4 h-4 mr-2"
