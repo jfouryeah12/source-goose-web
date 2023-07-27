@@ -40,6 +40,7 @@ export default function Navbar({ className, ...props }: Props) {
                   <a
                     href="https://twitter.com/GooseSourc97751"
                     className="hover:underline hover:text-white"
+                    target="_blank"
                   >
                     Twitter
                   </a>
@@ -48,14 +49,16 @@ export default function Navbar({ className, ...props }: Props) {
                   <a
                     href="https://web.facebook.com/people/SourceGoose/100094397121517/"
                     className="hover:underline hover:text-white"
+                    target="_blank"
                   >
                     Facebook
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://www.youtube.com/@SourceGoose/"
                     className="hover:underline hover:text-white"
+                    target="_blank"
                   >
                     Youtube
                   </a>
@@ -90,7 +93,7 @@ export default function Navbar({ className, ...props }: Props) {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="#" className="hover:underline">
               SourceGoose Entertainment™
             </a>
             . All Rights Reserved.
