@@ -71,7 +71,7 @@ export default function Teams({ className, ...props }: Props) {
         <TeamMember
           name="Weynbrenner Y. Mado"
           jobTitle="Chief Executive Officer/Programmer"
-          imageUrl="/images/teams/WeynbrennerMado.jpg"
+          imageUrl="/images/teams/_WeynbrennerMado.jpg"
         />
 
         {/* Member 3 */}
@@ -183,7 +183,7 @@ export default function Teams({ className, ...props }: Props) {
         <TeamMember
           name="Joaquie S. Dolera"
           jobTitle="Quality Assurance"
-          imageUrl="/images/teams/JoaquieDolera.jpg"
+          imageUrl="/images/teams/_1JoaquieDolera.jpeg"
         />
 
         {/* Add more TeamMembers here as needed */}
