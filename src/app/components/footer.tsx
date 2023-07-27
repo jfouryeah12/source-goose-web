@@ -22,6 +22,7 @@ export default function Navbar({ className, ...props }: Props) {
             <a
               href="https://github.com/SourceGoose"
               className="flex items-center"
+              target="_blank"
             >
               <Logo className="h-20 mr-3" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
@@ -102,6 +103,7 @@ export default function Navbar({ className, ...props }: Props) {
             <a
               href="https://web.facebook.com/people/SourceGoose/100094397121517/"
               className="text-gray-500 hover:text-white"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -121,6 +123,7 @@ export default function Navbar({ className, ...props }: Props) {
             <a
               href="https://discord.gg/S5MSvFgm"
               className="text-gray-500 hover:text-white"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -136,6 +139,7 @@ export default function Navbar({ className, ...props }: Props) {
             <a
               href="https://twitter.com/GooseSourc97751"
               className="text-gray-500 hover:text-white"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
@@ -155,6 +159,7 @@ export default function Navbar({ className, ...props }: Props) {
             <a
               href="https://github.com/SourceGoose"
               className="text-gray-500 hover:text-white"
+              target="_blank"
             >
               <svg
                 className="w-4 h-4"
