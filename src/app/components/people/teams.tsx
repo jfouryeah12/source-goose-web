@@ -51,10 +51,10 @@ export default function Teams({ className, ...props }: Props) {
       <br />
       <blockquote className="text-s italic text-white text-center">
         <p>
-        &quot;We&apos;ve seen things that&apos;ll make your eyebrows jump.
+          &quot;We&apos;ve seen things that&apos;ll make your eyebrows jump.
           <br /> We&apos;ve done stuff that defies explanation. <br />
-          And you know what? We&apos;re still out here, doing our thing like a bunch
-          of crazy, unstoppable maniacs.
+          And you know what? We&apos;re still out here, doing our thing like a
+          bunch of crazy, unstoppable maniacs.
           <br /> Watch out, world!&quot;
         </p>
       </blockquote>

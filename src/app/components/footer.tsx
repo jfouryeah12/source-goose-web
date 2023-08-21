@@ -72,17 +72,26 @@ export default function Navbar({ className, ...props }: Props) {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/pages/404" className="hover:underline hover:text-white">
+                  <a
+                    href="/pages/404"
+                    className="hover:underline hover:text-white"
+                  >
                     Privacy Policy
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/pages/404" className="hover:underline hover:text-white">
+                  <a
+                    href="/pages/404"
+                    className="hover:underline hover:text-white"
+                  >
                     Applicant Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/pages/404" className="hover:underline hover:text-white">
+                  <a
+                    href="/pages/404"
+                    className="hover:underline hover:text-white"
+                  >
                     Cookie Policy
                   </a>
                 </li>
