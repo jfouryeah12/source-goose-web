@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "@/app/components/Logo";
 import { DirectLink } from "./Lib/string";
 
@@ -14,6 +14,19 @@ export default function Navbar({ className, ...props }: Props) {
   const toggleMobileDropdown = () => {
     setIsMobileDropdownOpen((prevState) => !prevState);
   };
+
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newYear = new Date().getFullYear();
+      if (newYear !== currentYear) {
+        setCurrentYear(newYear);
+      }
+    }, 60000); // Check the year every minute
+
+    return () => clearInterval(interval);
+  }, [currentYear]);
 
   return (
     <footer className="bg-black text-white">
@@ -59,7 +72,7 @@ export default function Navbar({ className, ...props }: Props) {
                 <li>
                   <a
                     href={DirectLink.youtube}
-                    className="hover:underline hover:text-white"
+                    className="hover:underline hover:text-white transform scale-x-0 transition-transform group-hover:scale-x-50 duration-300 group-hover:bg-red-500 group-hover:shadow-md"
                     target="_blank"
                   >
                     Youtube
@@ -103,7 +116,7 @@ export default function Navbar({ className, ...props }: Props) {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2022 - {currentYear}{" "}
             <a href="#" className="hover:underline">
               SourceGoose Entertainment™
             </a>

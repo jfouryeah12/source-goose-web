@@ -8,7 +8,6 @@ interface Props extends React.HTMLAttributes<any> {
   className?: string;
 }
 
-
 const TeamMember = ({
   name,
   jobTitle,
@@ -43,21 +42,18 @@ const TeamMember = ({
 };
 
 export default function Teams() {
-
   return (
     <div>
       <h2 className="text-2xl font-bold">THE SG TEAM</h2>
       <br />
       <blockquote className="text-s italic text-white text-center">
         <p className="w-[240px] justify-center text-center mx-auto">
-        {Aboutus.thesgteam}
+          {Aboutus.thesgteam}
         </p>
       </blockquote>
       <div className="flex flex-wrap justify-center pt-10">
         {people.map((person) => (
-          <div
-            key={person.id}
-          >
+          <div key={person.id}>
             <TeamMember
               name={person.name}
               jobTitle={person.jobTitle}

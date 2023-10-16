@@ -1,12 +1,11 @@
 import React from "react";
-import {Aboutus} from "@/app/components/Lib/string"
+import { Aboutus } from "@/app/components/Lib/string";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
 }
 
 export default function About() {
-
   return (
     <div className="flex flex-col lg:flex-row">
       {/* Title on the left side (1/3 width on large screens) */}
@@ -16,9 +15,7 @@ export default function About() {
 
       {/* Description on the right sidAVe (2/3 width on large screens) */}
       <div className="lg:w-2/3 p-4 text-left">
-        <p>
-         {Aboutus.aboutus}
-        </p>
+        <p>{Aboutus.aboutus}</p>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "@/app/components/Button";
 import Link from "next/link";
+import { DirectLink } from "./Lib/string";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
@@ -63,7 +64,7 @@ export default function Navbar_Choices({ className, ...props }: Props) {
           People
         </Button>
       </a>
-      <a href="https://discord.gg/S5MSvFgm" target="_blank">
+      <a href={DirectLink.github} target="_blank">
         <Button type="button" color="github">
           <svg
             className="w-4 h-4 mr-2"

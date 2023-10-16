@@ -128,7 +128,6 @@ const people: Array<Props> = [
     jobTitle: "Game Tester/Tester",
     imageUrl: "/images/teams/maryrose_fajardo.svg",
   },
-  
 ];
 
 export default people;
