@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import people from "../Lib/people";
+import { Aboutus } from "../Lib/string";
+import About from "./aboutus";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
 }
 
-const colors = {
-  teamstext: ["text-green-500"],
-};
 
 const TeamMember = ({
   name,
@@ -42,151 +42,29 @@ const TeamMember = ({
   );
 };
 
-export default function Teams({ className, ...props }: Props) {
-  // ... Your existing code ...
+export default function Teams() {
 
   return (
     <div>
       <h2 className="text-2xl font-bold">THE SG TEAM</h2>
       <br />
       <blockquote className="text-s italic text-white text-center">
-        <p>
-          &quot;We&apos;ve seen things that&apos;ll make your eyebrows jump.
-          <br /> We&apos;ve done stuff that defies explanation. <br />
-          And you know what? We&apos;re still out here, doing our thing like a
-          bunch of crazy, unstoppable maniacs.
-          <br /> Watch out, world!&quot;
+        <p className="w-[240px] justify-center text-center mx-auto">
+        {Aboutus.thesgteam}
         </p>
       </blockquote>
-
       <div className="flex flex-wrap justify-center pt-10">
-        {/* Member 1 */}
-        <TeamMember
-          name="Jericho Y. Estares"
-          jobTitle="Lead Programmer"
-          imageUrl="/images/teams/JerichoEstares.jpg"
-        />
-
-        {/* Member 2 */}
-        <TeamMember
-          name="Weynbrenner Y. Mado"
-          jobTitle="Chief Executive Officer/Programmer"
-          imageUrl="/images/teams/_WeynbrennerMado.jpg"
-        />
-
-        {/* Member 3 */}
-        <TeamMember
-          name="Dennison Marcial"
-          jobTitle="Chief Operating Officer"
-          imageUrl="/images/teams/DennisonMarcial.jpg"
-        />
-
-        {/* Member 4 */}
-        <TeamMember
-          name="Janice R. Flores"
-          jobTitle="Secretary"
-          imageUrl="/images/teams/JaniceFlores.jpg"
-        />
-
-        {/* Member 5 */}
-        <TeamMember
-          name="Samuel Migs Gamay"
-          jobTitle="Project Manager/Programmer"
-          imageUrl="/images/teams/SamuelGamay.jpg"
-        />
-
-        {/* Member 6 */}
-        <TeamMember
-          name="Carl Narag Historillo"
-          jobTitle="Human Resource/Quality Assurance"
-          imageUrl="/images/teams/CarlNarag.jpg"
-        />
-
-        {/* Member 7 */}
-        <TeamMember
-          name="Lewis Gerald De Leon"
-          jobTitle="Programmer/AI Programmer"
-          imageUrl="/images/teams/LewisDeLeonC.jpg"
-        />
-
-        {/* Member 8 */}
-        <TeamMember
-          name="Tolits Bulado"
-          jobTitle="Programmer"
-          imageUrl="/images/teams/TolitsBulado.jpg"
-        />
-
-        {/* Member 9 */}
-        <TeamMember
-          name="Desmond Mado"
-          jobTitle="Programmer"
-          imageUrl="/images/teams/_404.jpg"
-        />
-
-        {/* Member 10 */}
-        <TeamMember
-          name="Jayson Garcia"
-          jobTitle="Programmer"
-          imageUrl="/images/teams/_404.jpg"
-        />
-
-        {/* Member 11 */}
-        <TeamMember
-          name="Jim Zedrick Lerio"
-          jobTitle="Audio Designer"
-          imageUrl="/images/teams/JimLerio.jpg"
-        />
-
-        {/* Member 12 */}
-        <TeamMember
-          name="Kean Paolo Orillano"
-          jobTitle="Public Relations Specialist"
-          imageUrl="/images/teams/KeanOrillano.jpg"
-        />
-
-        {/* Member 13 */}
-        <TeamMember
-          name="Michael Calimlim II"
-          jobTitle="Quality Assurance"
-          imageUrl="/images/teams/MichaelCalimlim.jpg"
-        />
-
-        {/* Member 14 */}
-        <TeamMember
-          name="Harold Ragudo"
-          jobTitle="Concept Artist"
-          imageUrl="/images/teams/_Resume_Harold.jpg"
-        />
-
-        {/* Member 15 */}
-        <TeamMember
-          name="Cyrus Valisno"
-          jobTitle="Concept Artist"
-          imageUrl="/images/teams/CyrusValisno.jpg"
-        />
-
-        {/* Member 16 */}
-        <TeamMember
-          name="Regor Paiman"
-          jobTitle="Concept Artist"
-          imageUrl="/images/teams/_404.jpg"
-        />
-
-        {/* Member 15 */}
-        <TeamMember
-          name="Lim Mio"
-          jobTitle="All-Around Artist"
-          imageUrl="/images/teams/_404.jpg"
-        />
-
-        {/* Member 16 */}
-        <TeamMember
-          name="Joaquie S. Dolera"
-          jobTitle="Quality Assurance"
-          imageUrl="/images/teams/_1JoaquieDolera.jpeg"
-        />
-
-        {/* Add more TeamMembers here as needed */}
+        {people.map((person) => (
+          <div
+            key={person.id}
+          >
+            <TeamMember
+              name={person.name}
+              jobTitle={person.jobTitle}
+              imageUrl={person.imageUrl}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

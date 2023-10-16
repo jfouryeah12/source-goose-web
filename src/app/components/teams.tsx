@@ -7,7 +7,6 @@ interface Props extends React.HTMLAttributes<any> {
 }
 
 export default function Teams({ className, ...props }: Props) {
-  // ... Your existing code ...
 
   return (
     <div>

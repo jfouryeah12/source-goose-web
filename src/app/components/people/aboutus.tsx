@@ -1,11 +1,11 @@
 import React from "react";
+import {Aboutus} from "@/app/components/Lib/string"
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
 }
 
-export default function About({ className, ...props }: Props) {
-  // ... Your existing code ...
+export default function About() {
 
   return (
     <div className="flex flex-col lg:flex-row">
@@ -14,17 +14,10 @@ export default function About({ className, ...props }: Props) {
         <h2 className="text-2xl font-bold">About Us</h2>
       </div>
 
-      {/* Description on the right side (2/3 width on large screens) */}
+      {/* Description on the right sidAVe (2/3 width on large screens) */}
       <div className="lg:w-2/3 p-4 text-left">
         <p>
-          We are a Filipino startup game development company, dedicated to
-          crafting captivating experiences inspired by history. Our talented
-          team of developers, designers, and storytellers collaborates to
-          meticulously research and recreate historical settings, ensuring an
-          authentic and engrossing gameplay experience. From exploring ancient
-          civilizations to engaging in epic battles and unraveling mysteries
-          from the past, SourceGoose games offer a captivating blend of
-          education and entertainment.
+         {Aboutus.aboutus}
         </p>
       </div>
     </div>
