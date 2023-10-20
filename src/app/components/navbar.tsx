@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "@/app/components/Logo";
 import Nav_Choices from "@/app/components/nav_choices";
+import { DirectLink } from "./Lib/string";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
@@ -23,7 +24,7 @@ export default function Navbar({ className, ...props }: Props) {
       />
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="https://github.com/SourceGoose"
+          href={DirectLink.github}
           className="flex items-center"
           target="_blank"
         >
@@ -65,7 +66,6 @@ export default function Navbar({ className, ...props }: Props) {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <Nav_Choices />
-            {/* Add more menu items here */}
           </ul>
         </div>
       </div>

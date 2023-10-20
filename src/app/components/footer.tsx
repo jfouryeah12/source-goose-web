@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "@/app/components/Logo";
+import { DirectLink } from "./Lib/string";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
@@ -13,6 +14,19 @@ export default function Navbar({ className, ...props }: Props) {
   const toggleMobileDropdown = () => {
     setIsMobileDropdownOpen((prevState) => !prevState);
   };
+
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newYear = new Date().getFullYear();
+      if (newYear !== currentYear) {
+        setCurrentYear(newYear);
+      }
+    }, 60000); // Check the year every minute
+
+    return () => clearInterval(interval);
+  }, [currentYear]);
 
   return (
     <footer className="bg-black text-white">
@@ -39,7 +53,7 @@ export default function Navbar({ className, ...props }: Props) {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://twitter.com/GooseSourc97751"
+                    href={DirectLink.twiiter}
                     className="hover:underline hover:text-white"
                     target="_blank"
                   >
@@ -48,7 +62,7 @@ export default function Navbar({ className, ...props }: Props) {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="https://web.facebook.com/people/SourceGoose/100094397121517/"
+                    href={DirectLink.facebook}
                     className="hover:underline hover:text-white"
                     target="_blank"
                   >
@@ -57,8 +71,8 @@ export default function Navbar({ className, ...props }: Props) {
                 </li>
                 <li>
                   <a
-                    href="https://www.youtube.com/@SourceGoose/"
-                    className="hover:underline hover:text-white"
+                    href={DirectLink.youtube}
+                    className="hover:underline hover:text-white transform scale-x-0 transition-transform group-hover:scale-x-50 duration-300 group-hover:bg-red-500 group-hover:shadow-md"
                     target="_blank"
                   >
                     Youtube
@@ -73,7 +87,7 @@ export default function Navbar({ className, ...props }: Props) {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="/pages/404"
+                    href={DirectLink.privacy_policy}
                     className="hover:underline hover:text-white"
                   >
                     Privacy Policy
@@ -81,7 +95,7 @@ export default function Navbar({ className, ...props }: Props) {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="/pages/404"
+                    href={DirectLink.applicant_privacy_policy}
                     className="hover:underline hover:text-white"
                   >
                     Applicant Privacy Policy
@@ -89,7 +103,7 @@ export default function Navbar({ className, ...props }: Props) {
                 </li>
                 <li>
                   <a
-                    href="/pages/404"
+                    href={DirectLink.cookie_policy}
                     className="hover:underline hover:text-white"
                   >
                     Cookie Policy
@@ -102,7 +116,7 @@ export default function Navbar({ className, ...props }: Props) {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2022 - {currentYear}{" "}
             <a href="#" className="hover:underline">
               SourceGoose Entertainment™
             </a>
@@ -110,7 +124,7 @@ export default function Navbar({ className, ...props }: Props) {
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
             <a
-              href="https://web.facebook.com/people/SourceGoose/100094397121517/"
+              href={DirectLink.facebook}
               className="text-gray-500 hover:text-white"
               target="_blank"
             >
@@ -130,7 +144,7 @@ export default function Navbar({ className, ...props }: Props) {
               <span className="sr-only">Facebook page</span>
             </a>
             <a
-              href="https://discord.gg/S5MSvFgm"
+              href={DirectLink.discord}
               className="text-gray-500 hover:text-white"
               target="_blank"
             >
@@ -146,7 +160,7 @@ export default function Navbar({ className, ...props }: Props) {
               <span className="sr-only">Discord community</span>
             </a>
             <a
-              href="https://twitter.com/GooseSourc97751"
+              href={DirectLink.twiiter}
               className="text-gray-500 hover:text-white"
               target="_blank"
             >
@@ -166,7 +180,7 @@ export default function Navbar({ className, ...props }: Props) {
               <span className="sr-only">Twitter page</span>
             </a>
             <a
-              href="https://github.com/SourceGoose"
+              href={DirectLink.github}
               className="text-gray-500 hover:text-white"
               target="_blank"
             >

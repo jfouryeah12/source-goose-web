@@ -7,8 +7,6 @@ interface Props extends React.HTMLAttributes<any> {
 }
 
 export default function Teams({ className, ...props }: Props) {
-  // ... Your existing code ...
-
   return (
     <div>
       <div className="max-w-sm bg-gray-800 border-gray-700 rounded-lg shadow-md">

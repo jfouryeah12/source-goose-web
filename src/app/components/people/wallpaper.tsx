@@ -10,7 +10,7 @@ export default function Gallery({ className, ...props }: Props) {
   return (
     <div>
       <section
-        className="bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply"
+        className="bg-center bg-no-repeat bg-cover bg-slate-900 bg-blend-multiply"
         style={{
           backgroundImage: `url('/images/group/sg-group-bw.svg')`, // Corrected URL
           height: "100vh", // Adjust the height as per your requirement

@@ -1,6 +1,7 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import styled from "styled-components";
+import Image from "next/image";
 
 const careers = [
   {
@@ -118,9 +119,11 @@ function CareerCom() {
                   <div className="text-center bg-center bg-cover bg-[url('/images/wallpaper/career-wallpaper.svg')]  rounded-lg shadow-lg">
                     <div className="flex items-center">
                       <div className="w-1/3 ">
-                        <img
+                        <Image
                           src={career.photo} // Replace with the correct image URL
                           alt={career.name}
+                          width={250}
+                          height={250}
                           className="h-48 w-full object-cover "
                         />
                       </div>

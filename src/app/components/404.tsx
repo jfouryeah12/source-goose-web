@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "@/app/components/Logo";
+import { DirectLink } from "./Lib/string";
 
 interface Props extends React.HTMLAttributes<any> {
   className?: string;
@@ -21,7 +22,7 @@ export default function Navbar({ className, ...props }: Props) {
         href="https://github.com/SourceGoose/.github/blob/main/profile/finelogo/sg-web-icon.ico"
       />
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://github.com/SourceGoose" className="flex items-center">
+        <a href={DirectLink.github} className="flex items-center">
           <Logo className="h-20 mr-3" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             SourceGoose
@@ -70,7 +71,7 @@ export default function Navbar({ className, ...props }: Props) {
             </li>
             <li>
               <a
-                href="#"
+                href="/page/people"
                 className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                 aria-current="page"
               >
@@ -79,7 +80,7 @@ export default function Navbar({ className, ...props }: Props) {
             </li>
             <li>
               <a
-                href="#"
+                href={DirectLink.discord}
                 className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                 aria-current="page"
               >
