@@ -46,14 +46,17 @@ export default function Teams() {
     <div>
       <h2 className="text-2xl font-bold">THE SG TEAM</h2>
       <br />
-      <blockquote className="text-s italic text-white text-center">
-        <p className="w-[240px] justify-center text-center mx-auto">
+      <blockquote className="text-s italic text-white text-center ">
+        <p className="w-[440px] justify-center text-center mx-auto">
           {Aboutus.thesgteam}
         </p>
       </blockquote>
-      <div className="flex flex-wrap justify-center pt-10">
+      <div className="flex flex-wrap justify-center my-10">
         {people.map((person) => (
-          <div key={person.id}>
+          <div
+            key={person.id}
+            className="relative group transform hover:scale-150  hover:z-10 ease-in-out duration-300"
+          >
             <TeamMember
               name={person.name}
               jobTitle={person.jobTitle}

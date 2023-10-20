@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import Image from "next/image";
 
 export default function _404() {
   return (
@@ -16,9 +17,10 @@ export default function _404() {
         <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-24 ">
           {/* Your content goes here */}
           <span className="flex item-center justify-center">
-            <img
+            <Image
               src="/images/emote/cute-ant.png"
-              width={"150px"}
+              width={150}
+              height={150}
               className="ml-2"
               alt="Cute ant"
             />
